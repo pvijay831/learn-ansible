@@ -4,7 +4,6 @@
     - name: install packages
       ansible.builtin.yum:
         name:
-          - httpd
           - nginx
         state: present
         enabled: yes
