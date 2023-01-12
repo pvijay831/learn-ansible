@@ -3,7 +3,6 @@
   tasks:
     - name: install packages
       ansible.builtin.yum:
-        name:
-          - nginx
+        name: nginx
         state: present
         enabled: yes
