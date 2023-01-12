@@ -1,13 +1,12 @@
 - name: install package
-  hosts: localhost
-  become: yes
+  hosts: all
   tasks:
     - name: install nginx
-      ansible.yum.package:
+      ansible.builtin.yum:
         name: nginx
-        state: present
+        state: installed
     - name: start the service
-      ansible.systemd.service:
+      ansible.builtin.systemd:
         name: nginx
         state: started
 
