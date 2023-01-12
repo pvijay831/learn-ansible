@@ -2,9 +2,9 @@
   hosts: localhost
   become: yes
   tasks:
-    - name: install ngnix
+    - name: install nginx
       ansible.yum.package:
-        name: ngnix
+        name: nginx
         state: present
     - name: start the service
       ansible.systemd.service:
