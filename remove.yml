@@ -1,0 +1,7 @@
+- name: remove packages
+  hosts: all
+  task:
+    - name: remove package
+      ansible.builtin.yum:
+         name: nginx
+         state: absent
