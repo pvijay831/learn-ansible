@@ -8,5 +8,6 @@
     - name: start the service
       ansible.builtin.systemd:
         name: nginx
-        state: started
+        state: stopped
+        enabled: no
 
