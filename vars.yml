@@ -44,4 +44,4 @@
       register: OUT
     - name: call register
       ansible.builtin.debug:
-        msg: "{{OUT}}"
+        msg: "{{OUT.stdout}}"
