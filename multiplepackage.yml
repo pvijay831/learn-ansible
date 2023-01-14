@@ -4,5 +4,6 @@
     - name: install packages
       ansible.builtin.yum:
         name: nginx
-        state: present
+        state: installed
+    - name: start the service
         enabled: yes
