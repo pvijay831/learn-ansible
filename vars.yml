@@ -45,6 +45,6 @@
     - name: call register
       ansible.builtin.debug:
         msg: "{{OUT.stdout}}"
-    - name: setting as a fact
-      ansible.builtin.set-facts:
+    - name: set a fact
+      ansible.builtin.set_facts:
         OUTPUT: "{{OUT.stdout}}"
