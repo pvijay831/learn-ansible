@@ -47,4 +47,4 @@
         msg: "{{OUT.stdout}}"
     - name: setting as a fact
       ansible.builtin.set_facts:
-        output: "{{OUT.stdout}}"
+        OUTPUT: "{{OUT.stdout}}"
