@@ -17,3 +17,13 @@
         msg: URL == {{URL}}
       vars:
         URL: task.online.com
+
+- name: declare a variable from file
+  hosts: all
+  connection: local
+  vars_files:
+    - var.yml
+  tasks:
+    - name: call a variable
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
