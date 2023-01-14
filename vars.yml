@@ -7,3 +7,13 @@
     - name: call a variable
       ansible.builtin.debug:
         msg: URL == {{URL}}
+
+- name: declare a variable from task
+  hosts: all
+  connection: local
+  tasks:
+    - name: call a variable
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
+      vars:
+        URL: task.online.com
